@@ -1,9 +1,9 @@
 {
-  "domain": "green_exchange",
-  "name": "Green Exchange",
+  "domain": "green_exchange_rates",
+  "name": "Green Exchange Rates",
   "version": "1.0.0",
-  "documentation": "https://github.com/YOUR_GITHUB_USERNAME/green-exchange",
-  "issue_tracker": "https://github.com/YOUR_GITHUB_USERNAME/green-exchange/issues",
+  "documentation": "https://github.com/eugenekainara/ha-green-exchange-rates",
+  "issue_tracker": "https://github.com/eugenekainara/ha-green-exchange-rates/issues",
   "codeowners": [],
   "config_flow": true,
   "iot_class": "cloud_polling",

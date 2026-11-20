@@ -1,4 +1,4 @@
-"""Green Exchange integration."""
+"""Green Exchange Rates integration."""
 from __future__ import annotations
 
 import logging
@@ -23,7 +23,7 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up Green Exchange from a config entry."""
+    """Set up Green Exchange Rates from a config entry."""
     coordinator = GreenExchangeCoordinator(hass, entry)
     await coordinator.async_config_entry_first_refresh()
 

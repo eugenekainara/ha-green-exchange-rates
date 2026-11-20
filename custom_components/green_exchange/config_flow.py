@@ -37,7 +37,7 @@ class GreenExchangeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             await self.async_set_unique_id(channel.lower())
             self._abort_if_unique_id_configured()
             return self.async_create_entry(
-                title=f"Green Exchange ({channel})",
+                title=f"Green Exchange Rates({channel})",
                 data={CONF_CHANNEL: channel},
             )
 
