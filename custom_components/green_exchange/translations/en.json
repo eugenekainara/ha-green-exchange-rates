@@ -1,0 +1,35 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Green Exchange",
+        "description": "Enter the public Telegram channel username (without @).",
+        "data": {
+          "channel": "Telegram channel"
+        }
+      }
+    },
+    "error": {
+      "invalid_channel": "Enter a Telegram channel username."
+    },
+    "abort": {
+      "already_configured": "This Telegram channel is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Polling schedule",
+        "description": "Hours are inclusive and use Home Assistant's local timezone. For example, 08 to 20 includes refreshes at 08:00 through 20:00.",
+        "data": {
+          "interval_minutes": "Refresh interval (minutes)",
+          "start_hour": "Start hour (0–23)",
+          "end_hour": "End hour (0–23)"
+        }
+      }
+    },
+    "error": {
+      "invalid_hours": "End hour must be the same as or later than start hour."
+    }
+  }
+}
