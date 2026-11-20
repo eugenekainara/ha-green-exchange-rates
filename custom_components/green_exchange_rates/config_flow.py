@@ -1,4 +1,4 @@
-"""Config and options flows for Green Exchange."""
+"""Config and options flows for Green Exchange Rates."""
 from __future__ import annotations
 
 import voluptuous as vol

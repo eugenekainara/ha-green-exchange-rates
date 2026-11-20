@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "Green Exchange",
+        "title": "Green Exchange Rates",
         "description": "Enter the public Telegram channel username (without @).",
         "data": {
           "channel": "Telegram channel"

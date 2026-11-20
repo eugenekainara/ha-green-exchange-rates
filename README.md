@@ -16,16 +16,16 @@ A custom Home Assistant integration that reads USD/EUR exchange-rate ranges from
 4. Enter this repository's GitHub URL, for example:
    `https://github.com/YOUR_GITHUB_USERNAME/green-exchange`
 5. Select **Add**. If Marketplace asks for a content type, choose **Integration**.
-6. Open the Green Exchange repository entry and select **Download / Install**.
+6. Open the Green Exchange Rates repository entry and select **Download / Install**.
 7. If Home Assistant asks for a restart, restart Home Assistant.
 8. Go to **Settings → Devices & services → Add integration**.
-9. Search for **Green Exchange** and enter the public Telegram channel username. The default is `Obmen_Vasilkovskaya`; enter it without the `@`.
+9. Search for **Green Exchange Rates** and enter the public Telegram channel username. The default is `Obmen_Vasilkovskaya`; enter it without the `@`.
 
 The repository must be public for Marketplace custom-repository installation. Marketplace may ask you to connect a GitHub account using its device sign-in flow.
 
 ## Configure polling
 
-After adding the integration, open **Settings → Devices & services → Green Exchange → Configure** to change:
+After adding the integration, open **Settings → Devices & services → Green Exchange Rates → Configure** to change:
 
 - **Refresh interval:** 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, or 30, or 60 minutes.
 - **Start hour:** 0–23.

@@ -1,5 +1,5 @@
 
-"""Sensors for Green Exchange."""
+"""Sensors for Green Exchange Rates."""
 from __future__ import annotations
 
 from homeassistant.components.sensor import SensorEntity, SensorDeviceClass, SensorStateClass
@@ -48,7 +48,7 @@ class GreenExchangeRatesSensor(CoordinatorEntity, SensorEntity):
         self._attr_icon = icon
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, entry.entry_id)},
-            name="Green Exchange",
+            name="Green Exchange Rates",
             manufacturer="Custom integration",
             model="Telegram exchange-rate parser",
         )
