@@ -17,7 +17,7 @@ DEFAULT_END_HOUR = 20
 INTERVAL_OPTIONS = [1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60]
 
 
-class GreenExchangeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+class GreenExchangeRatesConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle initial configuration."""
 
     VERSION = 1
@@ -52,10 +52,10 @@ class GreenExchangeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     @callback
     def async_get_options_flow(config_entry):
         """Get the options flow."""
-        return GreenExchangeOptionsFlow(config_entry)
+        return GreenExchangeRatesOptionsFlow(config_entry)
 
 
-class GreenExchangeOptionsFlow(config_entries.OptionsFlow):
+class GreenExchangeRatesOptionsFlow(config_entries.OptionsFlow):
     """Configure polling interval and active hours."""
 
     def __init__(self, config_entry):

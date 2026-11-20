@@ -10,7 +10,7 @@ from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from .const import ATTRIBUTION, DOMAIN
-from .coordinator import GreenExchangeCoordinator
+from .coordinator import GreenExchangeRatesCoordinator
 
 SENSORS = {
     "usd_buy": ("USD buy", "USD", "mdi:currency-usd"),
@@ -24,14 +24,14 @@ async def async_setup_entry(
     hass: HomeAssistant, entry: ConfigEntry, async_add_entities
 ):
     """Set up exchange-rate sensors."""
-    coordinator: GreenExchangeCoordinator = hass.data[DOMAIN][entry.entry_id]
+    coordinator: GreenExchangeRatesCoordinator = hass.data[DOMAIN][entry.entry_id]
     async_add_entities(
-        GreenExchangeSensor(coordinator, entry, key, *details)
+        GreenExchangeRatesSensor(coordinator, entry, key, *details)
         for key, details in SENSORS.items()
     )
 
 
-class GreenExchangeSensor(CoordinatorEntity, SensorEntity):
+class GreenExchangeRatesSensor(CoordinatorEntity, SensorEntity):
     """One exchange-rate sensor."""
 
     _attr_has_entity_name = True

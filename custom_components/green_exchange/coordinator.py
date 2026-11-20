@@ -16,7 +16,7 @@ from .parser import parse_latest_rates
 _LOGGER = logging.getLogger(__name__)
 
 
-class GreenExchangeCoordinator(DataUpdateCoordinator):
+class GreenExchangeRatesCoordinator(DataUpdateCoordinator):
     """Fetch rates from Telegram public preview."""
 
     def __init__(self, hass: HomeAssistant, entry: ConfigEntry):
@@ -35,7 +35,7 @@ class GreenExchangeCoordinator(DataUpdateCoordinator):
         try:
             async with self.session.get(
                 self.url,
-                headers={"User-Agent": "Mozilla/5.0 (compatible; HomeAssistant/GreenExchange)"},
+                headers={"User-Agent": "Mozilla/5.0 (compatible; HomeAssistant/GreenExchangeRates)"},
                 timeout=20,
             ) as response:
                 response.raise_for_status()
